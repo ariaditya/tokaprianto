@@ -17,7 +17,7 @@ class UserSettingController extends Controller
     public function update(Request $req)
     {
     	$id = Auth::id();
-    	\Validator::make($req->all(), [
+    	\Validator::make($req->all(), [  
     	         'name'=>'required|between:3,100',
     	         'email'=>'required|email|unique:users,email,'.$id,
     	         'password'=>'nullable|min:6',

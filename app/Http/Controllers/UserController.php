@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Auth;
 
-class UserControler extends Controller
+class UserController extends Controller
 {
     public function daftar(Request $req)
     {
@@ -15,4 +15,4 @@ class UserControler extends Controller
     }
 
 }
- 
+   
