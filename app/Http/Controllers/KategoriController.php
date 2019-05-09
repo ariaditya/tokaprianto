@@ -22,6 +22,11 @@ class KategoriController extends Controller
 
     public function save(request $req)
     {
+
+        \Validator::make($req->all(),[
+            'kategori'=>'required|between:3,100|unique:kategori,nama_kategori',
+        ])->validate();
+        
         return 'Fungsi Save';
     }    
  }
